@@ -1,12 +1,12 @@
 package testRunner;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"features"},
+        features = {"classpath:features"},
         glue = {"stepDefinitions"},
         plugin = {"pretty:src/cucumberReports/cucumberReports.txt",
                 "html:src/cucumberReports/htmlReports/htmlReport.html",
@@ -15,5 +15,5 @@ import org.junit.runner.RunWith;
         }
 
 )
-public class calorieTestRunner {
+public class ApplicationTestRunner {
 }
